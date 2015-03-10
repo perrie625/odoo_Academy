@@ -9,9 +9,10 @@ class Academy(http.Controller):
             'teachers': Teachers.search([])
         })
 
-    @http.route('/academy/<name>/', auth='public', website=True)
-    def teacher(self, name):
-        return '<h1>{}</h1>'.format(name)
+    @http.route('/academy/<int:id>/', auth='public', website=True)
+    def teacher(self, id):
+        return '<h1>{} ({})</h1>'.format(id, type(id).__name__)
+
 
 # class Academy(http.Controller):
 #     @http.route('/academy/academy/', auth='public')
