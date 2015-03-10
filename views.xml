@@ -28,11 +28,11 @@
 
     <record id="action_academy_courses" model="ir.actions.act_window">
         <field name="name">Academy courses</field>
-        <field name="res_model">academy.courses</field>
+        <field name="res_model">product.template</field>
     </record>
     <record id="academy_course_search" model="ir.ui.view">
         <field name="name">Academy courses: search</field>
-        <field name="model">academy.courses</field>
+        <field name="model">product.template</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
@@ -42,7 +42,7 @@
     </record>
     <record id="academy_course_list" model="ir.ui.view">
         <field name="name">Academy courses: list</field>
-        <field name="model">academy.courses</field>
+        <field name="model">product.template</field>
         <field name="arch" type="xml">
             <tree string="Courses">
                 <field name="name"/>
@@ -52,7 +52,7 @@
     </record>
     <record id="academy_course_form" model="ir.ui.view">
         <field name="name">Academy courses: form</field>
-        <field name="model">academy.courses</field>
+        <field name="model">product.template</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -72,6 +72,9 @@
     <menuitem sequence="0" id="menu_academy" name="Academy"/>
     <menuitem id="menu_academy_content" parent="menu_academy"
               name="Academy Content"/>
+    <menuitem id="menu_academy_content_courses"
+              parent="menu_academy_content"
+              action="action_academy_courses"/>
     <menuitem id="menu_academy_content_teachers"
               parent="menu_academy_content"
               action="action_academy_teachers"/>
