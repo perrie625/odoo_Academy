@@ -1,0 +1,15 @@
+
+<openerp><data>
+    <record id="action_academy_teachers" model="ir.actions.act_window">
+        <field name="name">Academy teachers</field>
+        <field name="res_model">academy.teachers</field>
+    </record>
+
+    <menuitem sequence="0" id="menu_academy" name="Academy"/>
+    <menuitem id="menu_academy_content" parent="menu_academy"
+              name="Academy Content"/>
+    <menuitem id="menu_academy_content_teachers"
+              parent="menu_academy_content"
+              action="action_academy_teachers"/>
+</data></openerp>
+
